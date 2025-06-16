@@ -20,6 +20,7 @@ export default function Home() {
       <Testimonials />
       {/* <WorkSection /> */}
       <FaqSection />
+
     </div>
   )
 }
