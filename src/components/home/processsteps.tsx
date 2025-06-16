@@ -5,16 +5,17 @@ export default function ProcessSteps() {
         { number: 3, title: "Pick Numbers", subtitle: "" },
         { number: 4, title: "Watch Live", subtitle: "Draw" },
         { number: 5, title: "Withdraw in", subtitle: "24 hours" },
-    ]
+    ];
 
     return (
         <>
             <div className="bg-[#191970]" id="how-it-works">
-                <h2 className="text-3xl lg:text-4xl font-bold text-white text-center "> HOW IT WORKS</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-white text-center">HOW IT WORKS</h2>
 
                 <div className="relative container mx-auto px-4 py-16">
 
-                    <div className="absolute top-24 left-1/2 w-full max-w-[80%] transform -translate-x-1/2 h-1 bg-white/30 z-0" />
+                    {/* Show line only on md and above */}
+                    <div className="hidden md:block absolute top-24 left-1/2 w-full max-w-[80%] transform -translate-x-1/2 h-1 bg-white/30 z-0" />
 
                     <div className="relative z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                         {steps.map((step, index) => (
@@ -30,5 +31,5 @@ export default function ProcessSteps() {
                 </div>
             </div>
         </>
-    )
+    );
 }
